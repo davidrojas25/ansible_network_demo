@@ -1,0 +1,15 @@
+---
+- name: ios ping test
+  hosts: rojaslab_routers
+  connection: network_cli
+  gather_facts: no
+
+
+  vars:
+    var1: value
+
+  tasks:
+    - name: io ping test task
+      ios_ping:
+        dest: 192.168.128.107
+      register: output
