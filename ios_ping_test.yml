@@ -13,3 +13,7 @@
       ios_ping:
         dest: 192.168.128.107
       register: output
+
+    - name: print rrt value
+      debug:
+        var: output  
