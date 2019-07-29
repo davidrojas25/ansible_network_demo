@@ -1,0 +1,16 @@
+---
+- name: change hostname  
+  hosts: cumulus
+
+  tasks:
+    - name: Fetch Status Of Interface
+      nclu:
+        commands:
+            - show interface eth0
+      register: output
+
+    - name: Print Status Of Interface
+      debug:
+        var: output  
+
+
