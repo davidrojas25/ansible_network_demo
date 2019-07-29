@@ -1,0 +1,12 @@
+---
+- name: change hostname  
+  hosts: cumulus
+
+  tasks:
+    - name: Modify hostname to Cumulus-1 and commit the change
+      nclu:
+        commands:
+            - add hostname cumulus001
+        commit: true
+
+
